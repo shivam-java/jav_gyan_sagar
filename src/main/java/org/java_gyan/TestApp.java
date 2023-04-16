@@ -1,28 +1,20 @@
 package org.java_gyan;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.List;
+import java.time.LocalDate;
+import java.util.function.Predicate;
 
 public class TestApp {
+
+   public int value;
+
+   public int hashCode()
+   {
+       return value^5;
+   }
+
     public static void main(String[] args) {
-       String s = "pwwkew";
-        char input[] = s.toCharArray();
-
-
-        HashMap<Character, Integer> map = new HashMap<Character, Integer>();
-        int max=0;
-        for (int i=0, j=0; i<s.length(); ++i){
-            if (map.containsKey(s.charAt(i))){
-                j = Math.max(j,map.get(s.charAt(i))+1);
-            }
-            map.put(s.charAt(i),i);
-            max = Math.max(max,i-j+1);
-        }
-
-        System.out.println(max);
+        LocalDate localDate=LocalDate.now();
+        System.out.println(localDate);
     }
 }
-
 
